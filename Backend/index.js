@@ -12,7 +12,7 @@ const issueRoutes = require("./routes/issueRoutes"); // Corrected variable
 app.use(express.json());
 app.use(cookieParser());
 const corsOption = {
-  origin: "https://library-silk-mu.vercel.app/",
+  origin: "*",
 };
 app.use(cors(corsOption)); // Enable CORS if needed
 
