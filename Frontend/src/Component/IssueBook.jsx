@@ -58,7 +58,7 @@ function IssueBook() {
     setStudentDetails(null);
     try {
       const response = await axios.get(
-        `http://localhost:4000/user/getuser/${studentId}`
+        `https://library-msph.onrender.com/user/getuser/${studentId}`
       );
       if (response.data.success) {
         setStudentDetails(response.data.user);
@@ -85,7 +85,7 @@ function IssueBook() {
     setIssueMessage("");
     try {
       const response = await axios.post(
-        `http://localhost:4000/issue/issuebook/${bookId}`,
+        `https://library-msph.onrender.com/issue/issuebook/${bookId}`,
         {
           stdId: studentDetails.stdId,
           book_Id: bookDetails._id,
