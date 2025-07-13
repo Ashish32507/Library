@@ -8,7 +8,7 @@ function AllIssueBook() {
     const fetchBooks = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/issue/allissuebook"
+          "https://library-msph.onrender.com/issue/allissuebook"
         );
         if (response.data.success) {
           setAllBooks(response.data.books);
