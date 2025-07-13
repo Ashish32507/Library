@@ -13,7 +13,6 @@ app.use(express.json());
 app.use(cookieParser());
 const corsOption = {
   origin: "*",
-  credentials: true,
 };
 app.use(cors(corsOption)); // Enable CORS if needed
 
