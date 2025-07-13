@@ -98,7 +98,6 @@ const ViewBook = () => {
         </div>
       </div>
 
-      <Review />
       <Footer />
     </>
   );

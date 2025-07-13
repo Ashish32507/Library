@@ -27,6 +27,7 @@ function ReturnBook() {
       );
       if (response.data.success) {
         setBookDetails(response.data.book);
+        console.log(response.data);
         toast.success("Book details fetched successfully!");
         // Clear input fields after successful fetch
         setBookId("");
@@ -90,12 +91,12 @@ function ReturnBook() {
               Quantity: {bookDetails.remainingQuantity}
             </p>
             <p className="text-gray-600">
-              Issue Date: {new Date(bookDetails.issueDate).toLocaleDateString()}
+              Issue Date: {bookDetails.issuDate.toString().slice(0, 10)}
             </p>
             <p className="text-gray-600">
               Return Date:{" "}
               {bookDetails.returnDate
-                ? new Date(bookDetails.returnDate).toLocaleDateString()
+                ? bookDetails.returnDate.toString().slice(0, 10)
                 : "Not Returned Yet"}
             </p>
             <p className="text-gray-600">Fine: {bookDetails.fine}</p>

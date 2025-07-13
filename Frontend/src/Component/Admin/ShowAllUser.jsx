@@ -53,9 +53,6 @@ function ShowAllUser() {
                 <th className="px-4 py-2 text-left text-sm sm:text-base">
                   Email
                 </th>
-                <th className="px-4 py-2 text-center text-sm sm:text-base">
-                  Action
-                </th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -82,14 +79,6 @@ function ShowAllUser() {
                     </td>
                     <td className="px-4 py-2 text-sm sm:text-base">
                       {user.email}
-                    </td>
-                    <td className="px-4 py-2 text-center space-x-2 text-sm sm:text-base">
-                      <button className="px-3 py-1 bg-green-500 text-white rounded-lg hover:bg-green-600">
-                        View
-                      </button>
-                      <button className="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">
-                        Delete
-                      </button>
                     </td>
                   </tr>
                 ))

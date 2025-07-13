@@ -138,8 +138,8 @@ exports.returnBook = async (req, res) => {
         remainingQuantity: book.quantity,
         author: book.author,
         image: book.image,
-        issuDate: IssueBook.issue_date,
-        returnDate: book.return_date || new Date().toString().slice(0, 10),
+        issuDate: findIssuedBook.issue_date,
+        returnDate: findIssuedBook.due_date,
       },
     });
   } catch (err) {
